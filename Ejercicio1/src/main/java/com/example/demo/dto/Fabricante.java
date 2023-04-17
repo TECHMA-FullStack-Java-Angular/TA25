@@ -19,7 +19,7 @@ public class Fabricante {
 	private int codigo;
 	private String nombre;
 	@OneToMany
-	@JoinColumn(name="codigo_articulo")
+	@JoinColumn(name="codigo")
 	private List<Articulo> articulo;//un fabricante puede tener muchos articulos
 	
 	//Constructores

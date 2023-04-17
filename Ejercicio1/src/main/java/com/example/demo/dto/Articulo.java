@@ -18,12 +18,12 @@ public class Articulo {
 	private String nombre;
 	private int precio;
 	@ManyToOne
-	@JoinColumn(name="codigo")
-	private int fabricante;//Cada articulo viene de 1 fabricante
+	@JoinColumn(name="fabricante_nombre")
+	private Fabricante fabricante;//Cada articulo viene de 1 fabricante
 	
 	//Contrusctores
 	
-	public Articulo(int codigo, String nombre, int precio, int fabricante) {
+	public Articulo(int codigo, String nombre, int precio, Fabricante fabricante) {
 		
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -69,12 +69,12 @@ public class Articulo {
 	}
 
 
-	public int getFabricante() {
+	public Fabricante getFabricante() {
 		return fabricante;
 	}
 
 
-	public void setFabricante(int fabricante) {
+	public void setFabricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
 	}
 
