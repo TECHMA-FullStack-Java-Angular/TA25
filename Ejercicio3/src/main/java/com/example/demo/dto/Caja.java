@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -11,15 +12,16 @@ import jakarta.persistence.Table;
 public class Caja {
 	
 	@Id
+	@Column(name="num_referencia")
 	private String referencia;
 	private String contenido;
 	private int valor;
 	@ManyToOne
 	@JoinColumn(name="almacen")
-	private int almacen;
+	private Almacen almacen;
 	
 	//Contructores
-	public Caja(String referencia, String contenido, int valor, int almacen) {
+	public Caja(String referencia, String contenido, int valor, Almacen almacen) {
 		
 		this.referencia = referencia;
 		this.contenido = contenido;
@@ -57,11 +59,11 @@ public class Caja {
 		this.valor = valor;
 	}
 
-	public int getAlmacen() {
+	public Almacen getAlmacen() {
 		return almacen;
 	}
 
-	public void setAlmacen(int almacen) {
+	public void setAlmacen(Almacen almacen) {
 		this.almacen = almacen;
 	}
 
