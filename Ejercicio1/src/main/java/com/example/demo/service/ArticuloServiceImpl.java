@@ -28,7 +28,7 @@ public class ArticuloServiceImpl implements IArticuloService{
 	}
 
 	@Override
-	public Articulo fabricanteXID(int codigo) {
+	public Articulo articuloXID(int codigo) {
 		
 		return iArticuloDAO.findById(codigo).get();
 	}

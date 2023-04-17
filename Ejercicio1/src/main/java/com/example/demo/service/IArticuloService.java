@@ -14,7 +14,7 @@ public interface IArticuloService {
 			
 			public Articulo guardarArticulo(Articulo nombre);	//Guarda un articulo CREATE
 			
-			public Articulo fabricanteXID(int codigo); //Leer datos de un articulo READ
+			public Articulo articuloXID(int codigo); //Leer datos de un articulo READ
 			
 			public Articulo actualizarArticulo(Articulo nombre); //Actualiza datos del articulo UPDATE
 			
