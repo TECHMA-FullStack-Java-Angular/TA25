@@ -12,7 +12,7 @@ public interface IDepartamentoService {
 			
 			public Departamento guardarDepartamento(Departamento departamento);	//Guarda un departamento CREATE
 			
-			public Departamento empleadoXID(int id); //Leer datos de un departamento READ
+			public Departamento departamentoXID(int id); //Leer datos de un departamento READ
 			
 			public Departamento actualizarDepartamento(Departamento cdepartamento); //Actualiza datos del departamento UPDATE
 			

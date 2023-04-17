@@ -1,12 +1,12 @@
-package com.example.demo.dao;
+package com.example.demo.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dao.IDepartamentoDAO;
 import com.example.demo.dto.Departamento;
-import com.example.demo.service.IDepartamentoService;
 
 @Service
 public class DepartamentoServiceImpl implements IDepartamentoService{
@@ -28,7 +28,7 @@ public class DepartamentoServiceImpl implements IDepartamentoService{
 	}
 
 	@Override
-	public Departamento empleadoXID(int id) {
+	public Departamento departamentoXID(int id) {
 		
 		return iDepartamentoDAO.findById(id).get();
 	}
