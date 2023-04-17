@@ -18,7 +18,7 @@ public class Articulo {
 	private String nombre;
 	private int precio;
 	@ManyToOne
-	@JoinColumn(name="fabricante_id")
+	@JoinColumn(name="fabricante")
 	private Fabricante fabricante;//Cada articulo viene de 1 fabricante
 	
 	//Contrusctores
